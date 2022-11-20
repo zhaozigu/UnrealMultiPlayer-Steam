@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "InputActionValue.h"
+#include "OnlineSubsystem.h"
 #include "MultiPlayerCoreCharacter.generated.h"
 
 
@@ -62,5 +63,9 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+public:
+	
+	IOnlineSessionPtr OnlineSessionInterface;
 };
 
